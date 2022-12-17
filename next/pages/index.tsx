@@ -44,7 +44,9 @@ export default function Home() {
     });
 
     const result = await response.json()
-    setResult((result.data))
+    if(result.data && result.data !== "There was an error submitting the SQL to the database :(") result.data = formatResults(result.data)
+    
+    setResult(result.data)
   }
 
   function formatResults(res: Array<Object>){
@@ -93,7 +95,7 @@ export default function Home() {
           <div className={styles.description}>{sql}</div>
         </>
         <>
-          <div className={styles.description}>{formatResults(result)}</div>
+          <div className={styles.description}>{result}</div>
         </>
       </main>
 

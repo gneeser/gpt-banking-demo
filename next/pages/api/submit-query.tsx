@@ -15,8 +15,6 @@ export default async function handler(
     if (!body.sql_query.data) {
         return res.json({ data: 'SQL language query not found' })
     }
-    console.log('\nbody.sql_query.data:');
-    console.log(body.sql_query.data);
     
 
     let response, connection;
@@ -28,15 +26,14 @@ export default async function handler(
             database: process.env.MYSQL_DATABASE,
         });
         await connection.connect();
-        response = await connection.query(body.sql_query.data);
-        console.log(response[0]);
+        response = await connection.query(body.sql_query.data);      
         connection.end();
         return res.json({ data: response[0] });
-    } catch (error) {
-        console.log(error);
+    } catch (error) {        
+        console.error(error);
         if(connection) try { connection.end(); } 
         catch (error) { /* ignore error for now */ }
 
-        return res.json({ data: 'SQL error :(' });
+        return res.json({ data: 'There was an error submitting the SQL to the database :(' });
     }
 }

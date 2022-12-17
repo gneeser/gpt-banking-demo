@@ -41,11 +41,10 @@ export default async function handler(
             presence_penalty: 0.0,
             stop: ["#", ";"],
         });
-        console.log(response.data);
         return res.json({ data: 'SELECT ' + response?.data?.choices[0]?.text });
     } catch (error) {
-        console.log(error);
-        return res.json({ data: 'No SQL returned' });
+        console.error(error);
+        return res.json({ data: 'There was an error rendering the SQL :(' });
         throw error;
     }
 }
