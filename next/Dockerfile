@@ -4,10 +4,9 @@
 FROM node:alpine
 RUN apk add --no-cache bash
 
-
 # Create the directory on the node image 
 # where our Next.js app will live
-# RUN mkdir -p /app
+RUN mkdir -p /app
 
 # Set /app as the working directory
 WORKDIR /app
@@ -19,7 +18,7 @@ WORKDIR /app
 COPY package*.json /app
 
 # Install dependencies in /app
-RUN yarn install
+RUN npm install
 
 # Copy the rest of our Next.js folder into /app
 COPY . /app
@@ -28,4 +27,4 @@ COPY . /app
 EXPOSE 3000
 
 # Run yarn dev, as we would via the command line 
-CMD ["yarn", "dev"]
+CMD ["npm", "run", "dev"]

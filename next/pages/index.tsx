@@ -50,6 +50,8 @@ export default function Home() {
   }
 
   function formatResults(res: Array<Object>){
+    if(!res.length) return "No results found"
+    
     // make a header row for the table with the keys of the first object
     let header = Object.keys(res[0]).map(key => <th>{key}</th>)
     // make a row for each object in the array
