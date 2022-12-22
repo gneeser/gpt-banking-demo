@@ -1,5 +1,5 @@
 # gpt-banking-demo
-A quick and dirty demo of using GPT3 to make a natural language to SQL app in Next.js.
+A basic demo of using GPT3 to make a natural language to SQL app in Next.js.
 
 To try it out for yourself, you'll need to start by [making an account](https://beta.openai.com/signup) with OpenAI and creating an [API Key](https://beta.openai.com/account/api-keys).
 
