@@ -9,6 +9,6 @@ After you have your key, clone this repo, cd into it, and place your key in an `
 export OPENAI_API_KEY=<key>
 ```
 
-From there, as long as you have [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed, it's as simple as running `docker compose up`. Docker will create two containers for you - a MySQL DB, which it will populate according to the `init.sql` file, and the Next.js app itself, which will run at `localhost:3000`. 
+From there, as long as you have [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed, it's as simple as running `docker compose up`. Docker will create two containers for you - a MySQL DB, which will be populated according to the `init.sql` file, and the Next.js app itself, which will run at `localhost:3000`. 
 
 Try out a few "natural language" queries, e.g. "customers who have made a withdrawal in the last month." The application will send your request to be parsed by OpenAI via their sdk, output the resulting SQL, and then make the request against the local MySQL DB, returning the results as a plain HTML table.
