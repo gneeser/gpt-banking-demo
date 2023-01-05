@@ -1,3 +1,5 @@
 data
 *.local
 next/env.local
+next/yarn.lock
+next/package-lock.json

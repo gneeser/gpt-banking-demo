@@ -9,7 +9,7 @@ services:
     container_name: next
     restart: always
     volumes:
-      - ./next:/app
+      # - ./next:/app
       - /app/node_modules/
     ports:
       - "3000:3000"
