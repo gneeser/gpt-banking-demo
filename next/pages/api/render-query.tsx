@@ -23,6 +23,7 @@ export default async function handler(
     if (!body.natural_language_query) {
         return res.json({ data: 'Natural language query not found' })
     }
+    console.log(`Rendering natural language to SQL: "${body.natural_language_query}"`);
 
     const configuration = new Configuration({
         apiKey: process.env.OPENAI_API_KEY,

@@ -1,17 +1,17 @@
 {
-    "name": "gpt-banking-demo",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "keywords": [],
-    "author": "Greg Neeser",
-    "scripts": {
-      "start": "docker-compose up",
-      "build": "docker-compose build",
-      "stop": "docker-compose down",
-      "clean": "docker system prune -af",
-      "clean:volumes": "docker volume prune -f",
-      "test": "echo \"Error: no test specified\"",
-      "generate": "docker exec -it next npm run generate"
-    }
+  "name": "gpt-banking-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Greg Neeser",
+  "scripts": {
+    "start": "docker-compose up",
+    "build": "docker-compose build",
+    "stop": "docker-compose down",
+    "clean": "docker system prune -af",
+    "clean:volumes": "docker volume prune -f",
+    "test": "echo \"Error: no test specified\"",
+    "generate": "docker exec -it next npm run generate"
   }
+}
