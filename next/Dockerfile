@@ -18,7 +18,8 @@ WORKDIR /app
 COPY package*.json /app
 
 # Install dependencies in /app
-RUN yarn install
+RUN npm install
+# RUN yarn install
 
 # Copy the rest of our Next.js folder into /app
 COPY . /app
@@ -27,4 +28,6 @@ COPY . /app
 EXPOSE 3000
 
 # Run yarn dev, as we would via the command line 
-CMD ["yarn", "dev"]
+# CMD ["yarn", "dev"]
+# CMD ["yarn", "watch"]
+CMD ["npm", "run", "dev"]

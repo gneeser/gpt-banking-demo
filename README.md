@@ -17,4 +17,4 @@ Check the `init.sql` file for what tables and values you can expect to find, the
 customers who have made a withdrawal in the last month
 ```
 
-The application will send your request to be parsed by OpenAI via their sdk, display the resulting SQL, and then make the request against the local MySQL DB, returning the results as a plain HTML table.
+The application will send your request to be parsed by OpenAI via their sdk, display the resulting SQL, and then make the request against the local MySQL DB, returning the results in a Material UI (MUI) DataGrid.
