@@ -21,13 +21,17 @@
     "@types/react-dom": "18.0.9",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "lodash": "^4.17.21",
     "mysql2": "^2.3.0",
     "next": "13.0.6",
-    "openai": "^3.0.0",
+    "openai": "^3.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-table": "^7.7.0",
-    "typescript": "4.9.4",
-    "lodash": "latest"
+    "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.195"
   }
 }
