@@ -74,9 +74,9 @@ export default async function handler(
             max_tokens: 1024
         });
         return res.json({ data: response?.data?.choices[0]?.message?.content });
-    } catch (error) {
-        // console.error(error);
+    } catch (error: any) {
+        console.error(error);
+        // console.error(error.toJSON ? error.toJSON : error);
         return res.json({ data: 'There was an error rendering the SQL :(', error: error });
-        throw error;
     }
 }
